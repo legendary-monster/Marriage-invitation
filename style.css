@@ -2,44 +2,40 @@ body {
   margin: 0;
   font-family: 'Georgia', serif;
   text-align: center;
-  background: url("background1.jpeg") no-repeat center center;
-  background-size: cover;   /* ensures background fills screen */
+  background:url("background1.jpeg") no-repeat center center ;
 }
 
-/* Remove unnecessary fixed positioning and tiny size */
 .background {
-  margin-top: 20px;
-  width: 100%;
-  height: auto;
+  margin-top: 100px;
+  top: 0; left: 10px;
+  width: 50px; height: 50px;
   z-index: -1;
 }
 
 .slideshow {
   display: flex;
-  flex-wrap: wrap;          /* allows wrapping on small screens */
+  width: 300%;
   animation: movePhotos 30s linear infinite;
 }
 
 .slideshow img {
-  width: 100%;              /* scale to container width */
-  height: auto;             /* keep aspect ratio */
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  opacity: 0.8;
-  padding: 5px;
+  opacity: 0.7;
+  padding: 10px;
 }
 
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-  .slideshow {
-    flex-direction: column; /* stack images vertically on mobile */
-    animation: none;        /* optional: stop animation for small screens */
-  }
-  .slideshow img {
-    width: 100%;
-    height: auto;
-    padding: 2px;
-  }
+@keyframes movePhotos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); }
+}
+
+.invitation {
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #b85c5c;
 }

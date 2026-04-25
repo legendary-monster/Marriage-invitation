@@ -24,6 +24,10 @@ canvas.addEventListener("mousedown", () => isDrawing = true);
 canvas.addEventListener("mouseup", () => isDrawing = false);
 canvas.addEventListener("mousemove", draw);
 
+canvas.addEventListener("touchstart", () => isDrawing = true);
+canvas.addEventListener("touchend", () => isDrawing = false);
+canvas.addEventListener("touchmove", drawTouch);
+
 function draw(e) {
   if (!isDrawing) return;
   const rect = canvas.getBoundingClientRect();

@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background:url("background1.jpeg") no-repeat center center fixed;
+}
+
+.background {
+  margin-top: 100px;
+  top: 0; left: 10px;
+  width: 50px; height: 50px;
+  z-index: -1;
+}
+
+.slideshow {
+  display: flex;
+  width: 300%;
+  animation: movePhotos 30s linear infinite;
+}
+
+.slideshow img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.7;
+  padding: 10px;
+}
+
+@keyframes movePhotos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); }
+}
+
+.invitation {
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #b85c5c;
+}
